@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Termiz Arxeologiya Muzeyi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap " rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- So'nggi A-Frame CDN -->
+    <script src="https://unpkg.com/aframe @1.5.0/dist/aframe-master.min.js"></script>
+    <meta name="description"
+        content="Termiz Arxeologiya Muzeyi — O'zbekiston janubidagi tarixiy merosning aks ettiruvchi muhim markaz.">
+    <meta name="keywords" content="termiz muzey, arxeologiya, muzey, termiz tarixi, virtual sayohat">
+    <meta name="author" content="Sizning Ismingiz">
+</head>
+
+<body>
+    <!-- Navigatsiya menyusi -->
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo" data-i18n="title">Termiz Arxeologiya Muzeyi</div>
+        <nav class="nav-links">
+            <a href="#about" data-i18n="about">Biz haqimizda</a>
+            <a href="#halls" data-i18n="virtual_tour">Virtual sayohat</a>
+            <a href="#visit" data-i18n="visit_info">Tashrif uchun</a>
+            <a href="#contact" data-i18n="contact">Kontakt</a>
+            <a> <!-- Til tanlovchi dropdown tugma -->
+                <div class="language-switcher">
+                    <button class="lang-toggle" onclick="toggleLangMenu()">🌍</button>
+                    <div class="lang-menu" id="langMenu">
+                        <a href="#">UZ</a>
+                        <a href="/pages_ru/index_ru.html">RU</a>
+                        <a href="/pages_en/index_en.html">EN</a>
+                    </div>
+                </div>
+            </a>
+
+        </nav>
+
+
+
+        <button class="menu-toggle">☰</button>
+    </header>
+    <!-- Asosiy rasmdagi sarlavha -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 data-i18n="title">Termiz Arxeologiya Muzeyi</h1>
+            <p data-i18n="p">Qadimiy Sharq madaniyatining yodgorlari</p>
+            <div class="hero-buttons">
+                <a href="halls/hall-1.html" class="btn" data-i18n="btn">Virtual sayohatga kirish</a>
+            </div>
+        </div>
+    </section>
+    <!-- Biz haqimizda -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <main>
+                <details>
+                    <summary data-i18n="summary1">Muzey tashkil etilishi</summary>
+                    <p data-i18n="p1">Termiz arxeologiya muzeyi 1998-yilda Oʻzbekiston Respublikasi Prezidentining
+                        „Muzeylar faoliyatini tubdan yaxshilash va takomillashtirish toʻgʻrisida“ gi Farmoni hamda
+                        Vazirlar Mahkamasining qarorlari asosida tashkil etildi.</p>
+                </details>
+                <details>
+                    <summary data-i18n="summary2">Bino va Imkoniyatlar</summary>
+                    <p data-i18n="p2">Muzey binosi "Oʻzqishloqloyiha" instituti tomonidan loyihalangan bo'lib, 100 ming
+                        eksponatni saqlash imkoniyatiga ega.</p>
+                </details>
+
+                <details>
+                    <summary data-i18n="summary3">Fondlar</summary>
+                    <ul>
+                        <li data-i18n="l1"><strong>Umumiy eksponatlar soni (2004 yil):</strong> 27,457 ta</li>
+                        <li data-i18n="l2"><strong>Numizmatika fondi:</strong> 19,824 dona tangalar</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary data-i18n="summary4">Ilmiy Faoliyat</summary>
+                    <p data-i18n="p3">Muzey ilmiy xodimlari quyidagi sohalarda tadqiqotlar olib borgan:</p>
+                    <ul>
+                        <li data-i18n="l3">Buyuk Ipak yo'li tarixi</li>
+                        <li data-i18n="l4">Buddizmning Tarim botig’iga tarqalishidagi roli</li>
+                        <li data-i18n="l5">Surxon vodiysining madaniy merosini o'rganish</li>
+                        <li data-i18n="l6">Antik davr me'morchiligi (Baysun, Chagʻoniyon, Jarqoʻton hududlari)</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary data-i18n="summary5">Ekspeditsiyalar</summary>
+                    <p data-i18n="p4">Muzey ishtirokida quyidagi joylarda arxeologik qazishmalar amalga oshirildi:</p>
+                    <ul>
+                        <li data-i18n="l7">Jondavlattepa (Sherobod tumani)</li>
+                        <li data-i18n="l8">Jarqoʻton</li>
+                        <li data-i18n="l9">Chingiztepa</li>
+                        <li data-i18n="l10">Fayoztepa</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary data-i18n="summary6">Nashrlar</summary>
+                    <p data-i18n="p5">Muzey direktori I.Botirov hamda boshqa ilmiy xodimlar quyidagi asarlar yozdilar:
+                    </p>
+                    <ul>
+                        <li data-i18n="l11">"Buyuk ipak yoʻli"</li>
+                        <li data-i18n="l12">"Termizda buddizm"</li>
+                        <li data-i18n="l13">"Surxon vohasi jahon madaniyati chorrahasida"</li>
+                        <li data-i18n="l14">"Kushonlar davri arxeologiyasi"</li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary data-i18n="summary7">Ko'rgazmalar</summary>
+                    <p data-i18n="p6">Ekskursiyalar uchun 3 tilda (o'zbek, rus, ingliz) matnlar tayyorlangan.</p>
+                </details>
+
+                <details>
+                    <summary data-i18n="summary8">Termiz Shahri Tarixi</summary>
+                    <p data-i18n="p7">Termiz taxminan 2500 yillik tarixga ega. Turli davrlarda Taramasta, Aleksandriya,
+                        Demetris, Ta-limmi nomlari bilan atalgan. Miloddan avvalgi VII asrda Baqtriyaning birinchi
+                        podshosi Zoroastr tomonidan asos solingan deb hisoblanadi.</p>
+                </details>
+                <details>
+                    <summary data-i18n="summary9">Surxondaryo Viloyati</summary>
+                    <p data-i18n="p6">Viloyat 1941-yilda tashkil topgan. Termiz poytaxti. Afg'oniston, Tojikiston,
+                        Turkmaniston, Qashqadaryo bilan chegaradosh. Yer maydoni — 20,1 ming km², aholisi — 1,5 million
+                        kishi.</p>
+                </details>
+            </main>
+        </div>
+    </section>
+
+    <!-- Zallar bo'limi -->
+    <section id="halls" class="halls-section">
+        <div class="container">
+            <h2 data-i18n="z">Zallar</h2>
+            <p data-i18n="pp">Muzeydagi zallarga kirish uchun kerakli tugmani tanlang:</p>
+            <div class="hall-grid">
+                <div class="zall">
+                    <div class="rasm">
+                        <img src="images/1.0.jpg" alt="">
+                        <img src="images/1.1.jpg" alt="">
+                        <img src="images/1.2.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2 data-i18n="zh2-1">1-zal: Surxon vohasi tosh davrida</h2>
+                        <h3 data-i18n="zh3-1">Mezolit davri (miloddan avvalgi 12–5 ming yilliklar)</h3>
+                        <p data-i18n="zp-1">Bu davrda odamlar gʻorlardan chiqib, daryo boʻylarida va ochiq hududlarda
+                            yashashgan.<strong data-i18n="zps1-1">Koʻhna Termiz</strong> va <strong
+                                data-i18n="zps1-2">Ayritom</strong> atrofidan topilgan tosh qurollar bu jarayonni
+                            tasdiqlaydi. </p>
+                        <p data-i18n="zp2-1">Mezolit davrida oʻq-yoy, suyakdan yasalgan bigiz va boshqa qurollar paydo
+                            bo‘lgan. <strong data-i18n="zps3-1">Mikrolitlar</strong> – mayda tosh qurollar keng
+                            tarqalgan. Hayvonlar asta-sekin xonakilashtirila boshlagan. Odamlarning dunyoqarashi va
+                            e’tiqodlari ham o‘zgara boshlagan.
+                        </p>
+
+                        <p data-i18n="zp3-1">Bu davr sanʼatining yorqin namunasi – <strong
+                                data-i18n="zps4-1">Koʻhitangdagi Zarautsoy suratlari</strong>dir.
+                            Gʻor devorlariga chizilgan 200 dan ortiq qizil bo‘yoqli rasmlarda ov marosimlari, hayvonlar
+                            va odamlar tasvirlangan. Tadqiqotchilar bu suratlarda sehrli ov marosimlari ifodalangan deb
+                            hisoblashadi.</p>
+                        <h3 data-i18n="zh3-2-1">Neolit va eneolit davrlari</h3>
+                        <p data-i18n="zp4-1">Keyingi bosqichlarda — <strong data-i18n="zps5-1">neolit</strong> (yangi
+                            tosh) va <strong data-i18n="zps6-1">eneolit</strong>
+                            (mis-tosh) davrlarida odamlar dehqonchilik va chorvachilik bilan shugʻullana boshlaganlar.
+                            Bu davrga oid manzilgohlar Koʻhitang va Bobotogʻ hududlarida aniqlangan va ular Surxon
+                            vohasida qadimiy madaniyat rivojida muhim rol o‘ynagan.</p>
+
+                        <p><a href="halls/hall-1.html" data-i18n="zps6-1">1-zal: Surxon vohasi tosh davriga sayohat
+                                ▶</a></p>
+                    </div>
+                </div>
+                <div class="zall">
+                    <div class="rasm">
+                        <img src="images/2.0.jpg" alt="">
+                        <img src="images/2.1.jpg" alt="">
+                        <img src="images/2.2.jpg" alt="">
+                        <img src="images/2.3.jpg" alt="">
+                        <img src="images/2.4.jpg" alt="">
+                        <img src="images/2.5.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>2-zal: Surxon vohasi bronza va temir davrida</h2>
+                        <section>
+                            <h3>Jez asri — tub oʻzgarishlar davri</h3>
+                            <p><strong>Miloddan avvalgi III–I ming yilliklarda</strong> Markaziy Osiyoda tub
+                                oʻzgarishlar sodir boʻldi. Bu davr “jez asri” deb ham ataladi.</p>
+                            <p>Bu davrda <strong>qalay, mis va qoʻrgʻoshin aralashmasidan</strong> hosil boʻlgan
+                                <strong>bronza qurollar</strong> ixtiro qilingan.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Tekshilgan eng qadimgi yodgorliklar</h3>
+                            <p>Surxon vohasida jez asri uning soʻnggi bosqichida, yaʼni miloddan avvalgi II ming
+                                yillikning birinchi choragida boshlanib, I ming yillik boshlarigacha davom etgan.</p>
+                            <p>Viloyat hududida soʻngi jez davriga oid eng dastlabki oʻrganilgan yodgorlik —
+                                <strong>Muzrabod vohasidagi Ulanbuloqsoy etagida joylashgan Sopollitepa</strong>
+                                hisoblanadi. Shu sababli bu davr madaniyati <strong>“Sopolli madaniyat”</strong> deb
+                                nomlangan.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Sopollitepa — jez davri manzilgohlari</h3>
+                            <p><strong>Sopollitepa</strong> — qal'a va unga tutash qismdan iborat bo'lib, tarxi 82x82
+                                metr, ichki yoʻlakli uch qator mudofaa devorlari bilan o'ralgan.</p>
+                            <p>Qal’ada aholi jamoa-bo'lib yashagan bo'lib, ular <strong>8 ta mahalladan</strong> iborat
+                                edi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Jarqo'ton — eng qadimiy shahar</h3>
+                            <p>Miloddan avvalgi XV asrda Sopollida hayot to'xtab, aholi <strong>Sheroboddaryo
+                                    havzasiga</strong>, jumladan, <strong>Bo'stonsoy irmog'iga ko'chib o'tgan</strong>.
+                            </p>
+                            <p>Bu yerda <strong></strong> deb nomlangan katta manzilgoh barpo etildi. Jarqo'ton
+                                <strong>100 gektardan ortiq maydon</strong>ni qamrab olgan.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Jarqo'ton yodgorligi</h3>
+                            <p>Jarqo'ton alohida muhofazalangan <strong>qal’a-saroy</strong>, <strong>diniy
+                                    inshootlar</strong>, <strong>turar joy binolar</strong>, <strong>kulol
+                                    ustaxonalar</strong>, <strong>xumdonlar</strong> va
+                                <strong>mozor-qabristondan</strong> iborat.
+                            </p>
+                            <p>Jarqo'tonda topilgan <strong>olov ibodatxonasi</strong> esa Sharqdagi olov dinlarining
+                                keyingi rivojlanishiga asos bo'lgan.</p>
+                        </section>
+
+                        <section>
+                            <h3>Yangi qishloqlar va qal'alar</h3>
+                            <p>Miloddan avvalgi XV–X asrlar oralig'ida viloyatda yangi <strong>jez davri
+                                    qishloqlari</strong> hamda <strong>qal'alar</strong> vujudga kelgan:</p>
+                            <ul>
+                                <li><strong>Mirshodi vohasi</strong></li>
+                                <li><strong>Surxondaryoning o'rta va yuqori havzasi</strong></li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Dastlabki dehqonchilik</h3>
+                            <p>Sopolli madaniyat xalqi Vatanimizda <strong>sug'orma dehqonchilikka asos soluvchi
+                                    qabilalar</strong> sifatida tanilgan.</p>
+                            <p>Topilgan don qoldiqlari, <strong>toshdan yasalgan mehnat qurollari</strong>, ipakdan
+                                toʻqilgan mato kabi <strong>ashyoviy dalillar</strong> bu haqda guvohluk beradi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Hunarmandchilik namunalari</h3>
+                            <p>Jezdan yasalgan <strong>ko'zgular</strong>, <strong>o'smadonlar</strong>,
+                                <strong>bigizlar</strong>, <strong>hayvon suratlari</strong>, <strong>ilonsimon va
+                                    xochsimon muhrlar</strong>, <strong>tog' jinslaridan yasalgan munchoqlar</strong> —
+                                barchasi hunarmandchilik san'atining yuksalishini aks ettiradi.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Kulolchilik rivoji</h3>
+                            <p>Bu davrda kulolchilik ham jadal rivojlandi. Sarg'ish hamda qizil loydan charxda yasalgan
+                                <strong>vaza, kosa, idishlar</strong> turli hajmlarda pishirilgan.
+                            </p>
+                            <p>Shuningdek, loydan yasalgan <strong>but haykallar</strong> ham topilgani badiiy
+                                san'atning ilk kurtaklari chiqayotganini ko'rsatadi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Sharq hamda G'arb bilan aloqa</h3>
+                            <p>Vohada jez davrini istiqomat qiluvchilar <strong>Shumer, Akkad, Elam, Xarappa, Sibir,
+                                    Qozog'iston</strong> hududlaridagi elatlar bilan <strong>iqtisodiy hamda madaniy
+                                    aloqada</strong> bo'lgan.</p>
+                        </section>
+
+                        <p><a href="halls/hall-2.html">2-zal: Surxon vohasi bronza va temir davriga sayohat ▶</a></p>
+                    </div>
+                </div>
+                <div class="zall">
+                    <div class="rasm">
+                        <img src="images/3.0.jpg" alt="">
+                        <img src="images/3.1.jpg" alt="">
+
+
+                    </div>
+                    <div class="text">
+                        <h2>3-zal: Qadimgi Baqtriya madaniyati</h2>
+                        <section>
+                            <h3>Miloddan avvalgi I ming yillik</h3>
+                            <p><strong>Miloddan avvalgi I ming yillikning birinchi choragi</strong> Surxon vohasi,
+                                Janubiy Tojikiston va Shimoliy Afgʻoniston hududlarini birlashtirgan
+                                <strong>Baqtriya</strong> oʻlkasining iqtisodiy, siyosiy va madaniy hayotida chuqur
+                                oʻzgarishlar sodir bo'lgan davr hisoblanadi.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Temir asri</h3>
+                            <p>Bu jarayon <strong>temirdan mehnat qurollari yasash</strong>ning ixtiro qilinishi bilan
+                                bog'liq. Voha ahli temirni soʻnggi jez davridayoq — ya’ni <strong>miloddan avvalgi
+                                    XIII–XII asrlar</strong> oralig’ida kashf etgan.</p>
+                            <p>Temirdan ommaviy tarzda qurollar yasash <strong>miloddan avvalgi VII–VI asrlarga</strong>
+                                toʻgʻri keladi. Bu rivojlanish dehqonchilik, harbiy bilimlar va hunarmandchilikka katta
+                                ta'sir qildi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Shaharsozlik va qishloqlar</h3>
+                            <p>Bu davrda vohaning dehqonchilik uchun qulay hududlari jadal o'zlashtirildi. Bandixon,
+                                Mirshodi vohalarida va Surxondaryoning quyi havzasida yangi shahar va qal'alar bunyod
+                                etildi.</p>
+                            <p>Soʻnggi jez davrida dehqonchilik daryolar bo'yida amalga oshirilsa, ilk temir asrida
+                                <strong>sun'iy kanallar</strong> qazilib yerlar o'zlashtirila boshlandi.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Iki qismli shaharlar</h3>
+                            <p>Baqtriya zaminida ikki qismli shaharlar rivojlandi. Bunday markazlardan biri —
+                                <strong>Jondavlattepa</strong> (Sherobod vohasi), <strong>Hayitobod</strong> (Quyi
+                                Surxon), <strong>Qiziltepa</strong> (Mirshodi vohasi).
+                            </p>
+                            <p>Har bir shahar <strong>ariki-a’lo</strong> (ma'muriy markaz) va ichki shahardan iborat
+                                bo'lib, mustahkam devorlar bilan o'ralgan edi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Hunarmandchilik va san'at</h3>
+                            <p>Baqtriya davrida hunarmandchilik ham rivojlandi. Mirshodi vohasidan topilgan <strong>odam
+                                    bosh qismi tasviri</strong>, Kuchuktepa, Qiziltepa obidalardagi <strong>uch qirrali
+                                    paykonlar</strong>, <strong>yarimoy shaklidagi o'roqlar</strong> namunadir.</p>
+                        </section>
+
+                        <section>
+                            <h3>Baqtriya tarixi</h3>
+                            <p><strong>Miloddan avvalgi VI asr</strong> o'rtalarida Baqtriya <strong>Eron Ahamoniylarga
+                                    qaramlikka tushdi</strong>. Bu voqea Kir boshchiligida Eron qo'shinlari Markaziy
+                                Osiyaning katta qismini bosib olganda sodir bo'ldi.</p>
+                            <p>Baqtriya Makedoniyalik Iskandar hujumigacha Eronning muhim satrapliklaridan biri sifatida
+                                saqlandi.</p>
+                        </section>
+
+                        <p><a href="halls/hall-3.html">3-zal: Qadimgi Baqtriya madaniyatiga sayohat ▶</a></p>
+                    </div>
+                </div>
+                <div class="zall">
+                    <div class="rasm">
+                        <img src="images/4.0.jpg" alt="">
+                        <img src="images/4.1.jpg" alt="">
+                        <img src="images/4.2.jpg" alt="">
+
+
+                    </div>
+                    <div class="text">
+                        <h2>4-zal: Makedoniyalik Iskandar davri</h2>
+                        <section>
+                            <h3>Miloddan avvalgi 329 yil</h3>
+                            <p><strong>Miloddan avvalgi 329 yilda</strong>, Makedoniyalik Iskandar boshchiligidagi
+                                yunon-makedon qo'shinlari Oks (Amudaryo) va Yaksart (Sirdaryo) oralig'idagi hududni
+                                egallash uchun yurish boshladi.</p>
+                            <p>Bu harbiy yurish so'g'dliklar, baqtriyaliklar va saklarning qattiq qarshiligiga
+                                qaramasdan, miloddan avvalgi 327 yilda katta bir qismni nazorat qilish bilan yakunlandi.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Iskandar vafotidan keyin</h3>
+                            <p>Miloddan avvalgi 323 yilda Iskandarning vafotidan keyin Surxon vohasi Salavkiylar davlati
+                                hokimiyati ostida qoldi. Keyinchalik bu hudud Yunon-Baqtriya podsholigi tarkibiga kirdi.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Yunon-Baqtriya podsholigi</h3>
+                            <p>Miloddan avvalgi III asr o'rtalarida Baqtriyada Diodot tomonidan <strong>Yunon-Baqtriya
+                                    shohligi</strong> tashkil etildi. Bu davlat miloddan avvalgi II asr o'rtalarigacha
+                                hukmronlik qildi.</p>
+                            <p>Miloddan avvalgi II asr 40–30-yillar orasida bu davlat sak, yuechji va toxar kabi
+                                elatlarning hujumlari tufayli inqirozga uchradi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Madaniyat aralashuvi</h3>
+                            <p>Yunon-Baqtriya davrida Sharq anʼanalari hamda yunon madaniyati o'zaro aralashdi.
+                                Shaharsozlik, me'morchilik, pul zarb qilish, hunarmandchilik sohalari jadal rivojlandi.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>San'at namunalari</h3>
+                            <p>Surxon vohasida topilgan <strong>terakota haykalchalar</strong>, fil suyagi yoki
+                                marmardan yasalgan ayollarning tasviri ushbu davr san'atining yuksak darajasini aks
+                                ettiradi.</p>
+                            <p>Shuningdek, tangalarda Diodot, Demetriy kabi hukmdorlarning portretlari tasvirlangan
+                                bo'lib, ular butun mintaqada savdo-alqoqning rivojlanganligini ko'rsatadi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Inqirozga olib kelgan sabablar</h3>
+                            <p>Yunon-Baqtriya davlati sak, yuechji va toxar kabi elatlarning doimiy hujumlari tufayli
+                                inqirozga uchradi. Ular markaziy shaharlarni vayron qildi va aholi yangi manzilgohlarga
+                                ko'chib o'tdi.</p>
+                        </section>
+                        <p><a href="halls/hall-4.html">4-zal: Makedoniyalik Iskandar davriga sayohat ▶</a></p>
+                    </div>
+                </div>
+                <div class="zall">
+                    <div class="rasm">
+                        <img src="images/5.0.jpg" alt="">
+                        <img src="images/5.1.jpg" alt="">
+                        <img src="images/5.2.jpg" alt="">
+
+
+                    </div>
+                    <div class="text">
+                        <h2>5-zal: Kushon davri madaniyati</h2>
+                        <section>
+                            <h3>Kushon podsholigi</h3>
+                            <p><strong>Miloddan avvalgi I — milodiy III asrlar</strong> o'rtasi davomida hukmronlik
+                                qilgan <strong>Kushon podsholigi</strong> Vatanimiz tarixida guruchli o'rin tutgan.</p>
+                            <p>Bu davlat yuechji va toxar qabilalarining birlashuvi natijasida vujudga keldi. Ularning
+                                hukmronligi Markaziy Osiyo xalqlari iqtisodiy hamda madaniy rivojlanishida muhim rol
+                                o'ynadi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Davlatning vujudga kelishi</h3>
+                            <p>Miloddan avvalgi II asr oxirida Yunon-Baqtriya podsholigi saklarning hujumlari tufayli
+                                inqirozga uchradi. Milodiy I asrda Kujula Kadfiz boshchiligida yuechji urug'lar bir
+                                butun davlatga birlashtirildi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Yagona davlatga aylanish</h3>
+                            <p>Kushonlar Guyshuan urug'i asosida birlashdi. Bularning nazorati ostida Baqtriyada
+                                mustahkam markaziy hokimiyat vujudga keldi.</p>
+                            <p>Ular hududda mudofaa inshootlarini qurishni davom ettirdilar. Masalan,
+                                <strong>Boysuntog'dagi
+                                    Temir darvoza</strong> ularga tegishli hisoblanadi.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Hududiy kengayish</h3>
+                            <p>Vima Kadfiz va Kanishka I davrida Kushonlar hukmronligi <strong>Shimoliy
+                                    Hindiston</strong> va
+                                <strong>Sharqiy Turkistondan</strong> iborat bo'lgan katta hududlarni qamrab oldi.
+                            </p>
+                            <p>Bu davlat Rim imperiyasi, Parfiya va Xan Xitoyi bilan bir qatorda turuvchi <strong>buyuk
+                                    davlatlardan biri</strong> sifatida tanildi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Inqirozga sabablar</h3>
+                            <p>Milodiy III asr oxirida ichki ziddiyatlar va <strong>Eron Sosoniylar qirolligining
+                                    hujumlari</strong>
+                                tufayli Kushon davlati inqirozga uchradi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Surxon vohasining rivojlanishi</h3>
+                            <p>Kushon davrida Surxon vohasi jadal rivojlandi. Unga misol sifatida quyidagilarni
+                                keltirish mumkin:</p>
+                            <ul>
+                                <li><strong>Kattanahar</strong> kanali — sug'orma dehqonchilikni rivojlantirish uchun
+                                    qazilgan.</li>
+                                <li><strong>Zang kanali</strong> — mavjud suv xo'jaligini kengaytirish.</li>
+                                <li><strong>Zartepa</strong> — yangi shahar sifatida bunyod etildi.</li>
+                                <li><strong>Termiz</strong> va <strong>Dalvarzintepa</strong> — kengaytirilgan antik
+                                    shaharlar.</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Shaharsozlik</h3>
+                            <p>Kushon davri shaharlari ikki qismdan iborat bo'lib, ular quyidagilardan iborat:</p>
+                            <ul>
+                                <li><strong>Arki-a’lo</strong> — ma'muriy markaz</li>
+                                <li><strong>Ichki shahar</strong> — aholi istiqomat qilgan joy</li>
+                            </ul>
+                            <p>Bu davr shaharlaridan Dalvarzintepa, Zartepa, Qoratepa, Fayoztepa eng yaxshi
+                                o'rganilgandir.</p>
+                        </section>
+
+                        <section>
+                            <h3>Din hamda san'at</h3>
+                            <p>Kushonlar davrida <strong>buddaviylik</strong> keng tarqaldi. Shaharlarda buddaviylik
+                                ibodatxonalari barpo etildi:</p>
+                            <ul>
+                                <li><strong>Koʻhna Termizdagi Qoratepa</strong></li>
+                                <li><strong>Fayoztepa</strong></li>
+                                <li><strong>Zoʻrmola</strong></li>
+                                <li><strong>Ayritom</strong></li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Buyuk Ipak yo'li</h3>
+                            <p>Kushonlar Buyuk Ipak yo'li savdosida muhim rol o'ynagan holda, Sharq va G'arb o'rtasidagi
+                                bog'lovchi havola vazifasini o'tagan.</p>
+                            <p>Bu davrda <strong>haykaltaroshlik</strong>, <strong>sangtaroshlik</strong>,
+                                <strong>terakota ishlari</strong> hamda <strong>numizmatika</strong> sohalari
+                                rivojlangan.
+                            </p>
+                        </section>
+
+                        <p><a href="halls/hall-5.html">5-zal: Kushon davri madaniyatiga sayohat ▶</a></p>
+                    </div>
+                </div>
+                <div class="zall">
+                    <div class="rasm">
+                        <img src="images/6.0.jpg" alt="">
+                        <img src="images/6.1.jpg" alt="">
+                        <img src="images/6.2.jpg" alt="">
+                        <img src="images/6.3.jpg" alt="">
+                        <img src="images/6.4.jpg" alt="">
+
+
+                    </div>
+                    <div class="text">
+                        <h2>6-zal: Shimoliy Tohariston (ilk o'rta asrlar)</h2>
+                        <section>
+                            <h3>Tohariston davlati</h3>
+                            <p><strong>Milodiy IV-asr oxiridan boshlab</strong>, Baqtriya hududi
+                                <strong>Tohariston</strong> deb yuritila boshlandi.
+                            </p>
+                            <p>Bu yerda hozirgi <strong>Surxondaryo viloyati</strong>, <strong>Janubiy
+                                    Tojikiston</strong> va <strong>Shimoliy Afg'oniston</strong> yerlari kirgandi.
+                                Tohariston hududiy jihatdan <strong>Kushonlar davri Baqtriyasiga teng</strong> bo'lgan.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Hukmdorlik navbati</h3>
+                            <ul>
+                                <li><strong>Milodiy III–IV asr:</strong> Tohariston — Sosoniylar Eroni viloyati</li>
+                                <li><strong>V asr:</strong> Xioniylar va Eftaliylar hokimiyati</li>
+                                <li><strong>VI asr 60-yillari:</strong> Turk hoqonligi nazorati ostiga o'tdi</li>
+                                <li><strong>VII–VIII asrlar:</strong> Arab xalifaligi tomonidan bosib olinishi bilan
+                                    yakunlandi</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Kichik mulkliklar</h3>
+                            <p>V–VIII asrlarda Tohariston bir nechta kichik mulkliklarga bo'lingan. Ulardan eng
+                                muhimlari:</p>
+                            <ul>
+                                <li><strong>Chagʻoniyon</strong> — Surxon vohasining gʻarbiy qismi</li>
+                                <li><strong>Kuftan</strong> — Amudaryoning yuqori oqimida</li>
+                                <li><strong>Termizshohlar</strong> — Termiz, Jarqorg'on, Angor tumani</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Termizshohlar mulki</h3>
+                            <p>Termizshohlar mulki <strong>Amudaryoning o'ng qirg'og'i</strong>, shuningdek,
+                                <strong>Angor, Termiz, Jarqorg'on</strong> hududlarini ham qamrab olgan.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Chagʻoniyon davlati</h3>
+                            <p>Chagʻoniyon (arabcha — Saganian, xitoycha — Chigo-Yan-Na) — <strong>Chagʻonrud
+                                    (Surxondaryo) daryosi</strong>, <strong>Hisor</strong> va <strong>Bobotogʻ togʻ oldi
+                                    maydonlari</strong> atrofida joylashgan davlat.</p>
+                            <p>Davlat markazi — <strong>Budrach</strong>, bu yerda hukmdor saroyi ham joylashgan.</p>
+                        </section>
+
+                        <section>
+                            <h3>Shaharsozlik va me'morchilik</h3>
+                            <p>Tohariston shaharlari <strong>ikki qismdan</strong> iborat bo'lib, ular:</p>
+                            <ul>
+                                <li><strong>Arki-a’lo</strong> — hukmdor saroyi</li>
+                                <li><strong>Shahriston</strong> — aholi istiqomat qilgan joy</li>
+                            </ul>
+                            <p>Manbalarga ko'ra, Termiz mudofaa devori uzunligi <strong>10 km (20 li)</strong>,
+                                Chagʻoniyon esa <strong>5 km (10 li)</strong> bo'lgan.</p>
+                        </section>
+
+                        <section>
+                            <h3>Madaniyat merkezlari</h3>
+                            <p>Shimoliy Tohariston shaharlari <strong>diniy markazlar</strong> vazifasini o'tagan:</p>
+                            <ul>
+                                <li><strong>Koʻhna Termiz</strong> — qazishmalar natijasida g'orsimon inshootlar
+                                    topilgan</li>
+                                <li><strong>Zangtepa</strong> — qayin po'stlog'iga bitilgan qadimiy yozuvlar</li>
+                                <li><strong>Chordingak</strong> — buddaviylik inshooti</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Sanoat va hunarmandchilik</h3>
+                            <p>Ilk o'rta asrlarda Surxon vohasida quyidagilar rivojlangan:</p>
+                            <ul>
+                                <li>Turli shisha idishlar</li>
+                                <li>Metalldan yasalgan oʻsmadon va qurollar</li>
+                                <li>Togʻ minerallaridan yasalgan munchoqlar</li>
+                                <li>Metallga taqlid etilgan sopol buyumlar</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Badiiy san'at</h3>
+                            <p>Toharistonda haykaltaroshlik hamda <strong>devoriy rang tasvir san'ati</strong> yuksak
+                                darajada rivojlangan:</p>
+                            <ul>
+                                <li><strong>Tavka qo'rg'oni</strong> — ov marosimi rasmlari</li>
+                                <li><strong>Bolaliktepa</strong> — bazm marosimi suratlari</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Qadimiy binolar</h3>
+                            <p>Angor vohasidagi <strong>devoriy rang tasvir san'ati</strong>,
+                                <strong>Bolaliktepa</strong>, <strong>Yumaloqtepa</strong> kabi obidalarda muhtasham zal
+                                va mehmonxonalar topilgan. Ular <strong>rang-barang haykallar</strong>, <strong>somon
+                                    suvoq</strong>, <strong>devoriy naqshlar</strong> bilan bezatilgan.
+                            </p>
+                        </section>
+
+                        <p><a href="halls/hall-1.html">6-zal: Shimoliy Tohariston (ilk o'rta asrlar)ga sayohat ▶</a></p>
+                    </div>
+                </div>
+                <div class="zall">
+                    <div class="rasm">
+                        <img src="images/7.0.jpg" alt="">
+                        <img src="images/7.1.jpg" alt="">
+                        <img src="images/7.2.jpg" alt="">
+                        <img src="images/7.3.jpg" alt="">
+                        <img src="images/7.4.jpg" alt="">
+
+                    </div>
+                    <div class="text">
+                        <h2>7-zal: Rivojlangan o'rta asrlar</h2>
+                        <section>
+                            <h3>Islom madaniyatining kirib kelishi</h3>
+                            <p><strong>VIII asrning ikkinchi yarmidan boshlab</strong>, Surxon vohasida islom dini keng
+                                tarqaldi.</p>
+                            <p>Bu davrda arab tili, yozuvlari hamda musulmon madaniyati mustahkamlandi. Shaharlarda
+                                <strong>masjidlar</strong>, <strong>madrasalar</strong>,
+                                <strong>karvonsaroylar</strong>, <strong>minoralar</strong>, <strong>maqbaralar</strong>
+                                barpo etildi.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Hukmdorlik navbati</h3>
+                            <p>IX asrdan XIII asrgacha Surxon vohasi quyidagi davlatlarning nazorati ostida bo'ldi:</p>
+                            <ul>
+                                <li><strong>Somoniyliklar</strong></li>
+                                <li><strong>Qoraxoniyliklar</strong></li>
+                                <li><strong>G'aznaviyliklar</strong></li>
+                                <li><strong>Saljuqiylar</strong></li>
+                                <li><strong>Xorazmshohlari</strong></li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Shaharsozlik rivoji</h3>
+                            <p>IX asrdan boshlab Termiz va Chagʻoniyon shaharlarida <strong>uch qismli tuzilish</strong>
+                                hosil bo'ldi:</p>
+                            <ul>
+                                <li><strong>Arki-a’lo</strong> – hukmdor saroyi</li>
+                                <li><strong>Shahriston</strong> – savdo-mezbonlik markazi</li>
+                                <li><strong>Rabad</strong> – aholi istiqomat qiladigan tashabbusiy mahallalar</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Termizning rivojlanishi</h3>
+                            <p>Termiz X asr oxirida <strong>500 gektarlik shahar</strong>ga aylandi. XI–XII asrlar
+                                davomida uning hududi yanada kengaydi.</p>
+                            <p>Chagʻoniyonning markazi — <strong>Budrach</strong> (Qizilsuv va Surxondaryo qirg'og'idagi
+                                joy), bu yer <strong>6 km²</strong> maydonni egallagan.</p>
+                        </section>
+
+                        <section>
+                            <h3>Me'morchilik uslubi</h3>
+                            <p>IX asrdan boshlab <strong>pishirilgan g'ishtlar</strong> ommaviy ishlatila boshlandi.</p>
+                            <p>Shahar inshootlari bezaklarida <strong>islomiy naqshlar</strong>,
+                                <strong>girihlar</strong>, <strong>sirlangan idishlar</strong> keng qo'llanildi.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Kulolchilik san'ati</h3>
+                            <p>Surxon vohasida hunarmandchilik jadal rivojlandi. Kulollar, temirchilar, misgarlar,
+                                shishasozlar uchun maxsus mahallalar mavjud bo'lgan.</p>
+                            <p>Temirchilar mehnat qurollari, uy-ro'zg'or buyumlari, <strong>antika shamdonlar</strong>,
+                                <strong>ko'zgular</strong>, <strong>qosh tergichlar</strong> yasagan.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Misgarlik namunalari</h3>
+                            <p>Budrach yodgorligidan topilgan <strong>300 kg lik mis xazinasida</strong>: qozonlar,
+                                shamdonlar, idishlar bor edi. Ular Surxon vohasida <strong>misgarlik san'atining
+                                    yuksalishini</strong> aks ettiradi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Shisha ustaliklari</h3>
+                            <p>O'rta asrlarda Termizlik ustolar <strong>ko'k</strong>, <strong>havorang</strong>,
+                                <strong>sarg'ish shishadan</strong> idishlar, bankalar, kolbalar yasashda yuksak mahorat
+                                ko'rsatdilar.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Yangiliklar</h3>
+                            <p>X asrda sirlangan idishlar keng tarqaldi. Ularga <strong>yashil</strong>,
+                                <strong>jigarrang</strong>, <strong>sarg'ish tonlar</strong> hamda <strong>sir ustidan
+                                    bitilgan yozuvlar</strong> xos bo'ldi.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Simob ko'zachalar</h3>
+                            <p>Termizlik kulollar o'rta asrlarda <strong>simobli ko'zachalar</strong> yasashda dunyo
+                                miqyosida tanilgan.</p>
+                        </section>
+
+
+                        <p><a href="halls/hall-1.html">7-zal: Rivojlangan o'rta asrlarga sayohat ▶</a></p>
+                    </div>
+                </div>
+                <div class="zall">
+                    <div class="rasm">
+                        <img src="images/8.0.jpg" alt="">
+                        <img src="images/8.1.jpg" alt="">
+                        <img src="images/8.2.jpg" alt="">
+                        <img src="images/8.3.jpg" alt="">
+                        <img src="images/8.4.jpg" alt="">
+                        <img src="images/8.5.jpg" alt="">
+
+                    </div>
+                    <div class="text">
+                        <h2>8-zal: Amir Temur va Temuriylar davri</h2>
+                        <section>
+                            <h3>Termizning ahamiyati</h3>
+                            <p><strong>1362–1370 yillar oralig’ida</strong>, Movarounnahrda markazlashgan davlatni
+                                tashkil etish jarayonida Termiz muhim o'rin tutdi.</p>
+                            <p>1370 yilda Amir Temur taxtga o'tirganda, Termiz sayyidlari Abu Muʻollim va Ali Akbarlar
+                                bilan yaqin aloqalar o'rnatildi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Amir Temur va Termiz</h3>
+                            <p>Amir Temur 1399 yilda Hindistonga, 1404 yilda g'arbga qaratilgan yurishlardan keyin
+                                Termizda dam olgan.</p>
+                            <p>U yerda bir necha bor to'xtab, mintaqaga e'tibor qaratgan.</p>
+                        </section>
+
+                        <section>
+                            <h3>Hukmdorlik navbati</h3>
+                            <p>1409-yilgacha Termiz Temuriylarning biri — <strong>Mirzo Halil sulton</strong>, keyin esa
+                                <strong>Shohruh mirzo</strong> hokimiyati ostida bo'ldi.
+                            </p>
+                            <p>Bundan so'ng shahar <strong>Mirzo Ulug'bek davlati</strong> tarkibiga kirdi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Chingizxon bosqini va tiklanish</h3>
+                            <p><strong>1220 yilda Chingizxon bosqini</strong> Surxon vohasiga jiddiy zarar yetkazdi.
+                                Lekin bu hudud Amir Temur davri boshlanishi bilan qayta tiklandi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Termizning ko'rinishi</h3>
+                            <p>XV asrda Termiz juda katta va zich aholi bilan band bo'lgan shahar edi. Ammo u devorlar
+                                bilan o'ralmagan edi.</p>
+                            <p>Rui Gonsales de Klavixo 1404 yilda Termiz orqali o'tganda uning xuddi bunday ekanligini
+                                kundaligidan yozib qoldirdi:</p>
+                            <blockquote>
+                                "Termiz juda keng va aholisi zich joylashgan, unda tashqi devor va mudofaa istehkomlari
+                                yoʻq. Atrofi bogʻ-rogʻ, shaharni koʻplab anhorlar kesib oʻtadi. Biz doimi xilma-xil
+                                mollar sotiladigan gavjum koʻchalar va maydonlardan oʻtib bordik."
+                            </blockquote>
+                        </section>
+
+                        <section>
+                            <h3>Chagʻoniyon ham o'z mavqeini saqladi</h3>
+                            <p>Chagʻoniyon ham Amir Temur davrida o'z ahamiyatini saqlab qoldi. XV asr oxiri – XVI asr
+                                boshlarida hayot markazi shahristondan rabadga siljidi.</p>
+                            <p>Bu yerda <strong>Navand</strong> deb nomlangan yangi markaz ham vujudga keldi. U
+                                choparlar uchun markaz vazifasini o'tagan.</p>
+                        </section>
+
+                        <section>
+                            <h3>Zarbxonalar</h3>
+                            <p>Surxon vohasida <strong>Termiz</strong> <strong>Chagʻoniyon</strong> va
+                                <strong>Navand</strong>da zarbxonalarga ega bo'lgan. Ular Temuriylar davrida chiqarilgan
+                                tangalar bilan birga, eski dirhamlarni qayta zarb qilish hamda ulardan foydalanishda
+                                muhim rol o'ynagan.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Arxeologik topilmalar</h3>
+                            <p>Surxon vohasida quyidagi yodgorliklar aniqlangan:</p>
+                            <ul>
+                                <li><strong>Shoʻrabqoʻrgʻon</strong> – XIV–XVI asrlarga oid madaniy qatlamlar</li>
+                                <li><strong>Qutlugʻ shohtepa</strong> – qishloq xo'jaligi markazi</li>
+                                <li><strong>Navandaktepa</strong> – savdo yo'lidagi karvonsaroy</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Ko'rgazmalar</h3>
+                            <p>Muzeydagi namoyishxonalarda quyidagilar mavjud:</p>
+                            <ul>
+                                <li>Jangchi himoya kiyimlari</li>
+                                <li>Xitoy chinisiga teng darajadagi lagan va kosalar</li>
+                                <li>Ko'za, chiroqlar</li>
+                                <li>Shaxmat donalari</li>
+                                <li>Memoriy koshinlar</li>
+                            </ul>
+                        </section>
+
+                        <p><a href="halls/hall-1.html">8-zal: Amir Temur va Temuriylar davri sayohat ▶</a></p>
+                    </div>
+                </div>
+                <div class="zall">
+                    <div class="rasm">
+                        <img src="images/9.0.jpg" alt="">
+                        <img src="images/9.1.jpg" alt="">
+                        <img src="images/9.2.jpg" alt="">
+                        <img src="images/9.3.jpg" alt="">
+                        <img src="images/9.4.jpg" alt="">
+                        <img src="images/9.5.jpg" alt="">
+
+
+                    </div>
+                    <div class="text">
+                        <h2>9-zal: Surxon vohasi XVI-XX asr boshlarida</h2>
+                        <section>
+                            <h3>Davlat navbati</h3>
+                            <p><strong>XVI asr boshlaridan XVII asrning birinchi yarmigacha</strong> Surxon vohasi
+                                Shayboniyliklar va Joniylar (Ashtarxoniylar) davlati nazoratida bo'ldi.</p>
+                            <p>XVIII asrning birinchi yarmidan XX asr boshlarigacha bu hudud <strong>Buxoro
+                                    amirligi</strong> tarkibiga kirdi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Termizning ahamiyati</h3>
+                            <p>XVI asrda Termiz muhim markazlardan biri bo'lib qoldi. Tarixchi Mahmud Ibn Valining
+                                so'zlariga ko'ra:</p>
+                            <blockquote>
+                                "Termizning qishloqlari koʻp boʻlgan. Uning muhim bir qismini hukmdor qarorgohi, bozor,
+                                madrasa va hashamatli juma masjidi bor Salovat (Salihobod) tashkil etadi."
+                            </blockquote>
+                        </section>
+
+                        <section>
+                            <h3>Sherobodning vujudga kelishi</h3>
+                            <p><strong>XVIII asr boshlarida</strong> Sherobodga asos solindi. XIX asrga kelib bu shahar
+                                <strong>Sharqiy Buxoroning eng yirik iqtisodiy hamda madaniy markazlari</strong>dan
+                                biriga aylandi.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Chagʻoniyonning tushkunligi</h3>
+                            <p><strong>XVI asr oxiriga kelib</strong>, Chagʻoniyon (Budrach) tushkunlikka uchradi. Shu
+                                sababli yangi shahar <strong>Qizilsuvning yuqori havzasida Dehinay (Denov)</strong> nomi
+                                bilan vujudga keldi.</p>
+                            <p>XVII asr manbalari Denovni mustahkam qal'a, gavjum bozor, katta madrasa hamda xonaqolar
+                                bilan bog'liq shahar sifatida tasvirlaydi.</p>
+                        </section>
+
+                        <section>
+                            <h3>Muhim manzilgohlar</h3>
+                            <p>Bu davrda Surxon vohasida quyidagi muhim manzilgohlardan bir nechtasi hisoblanadi:</p>
+                            <ul>
+                                <li><strong>Navandak</strong> – savdo markazi</li>
+                                <li><strong>Shahri Safo</strong> – diniy inshootlar</li>
+                                <li><strong>Javzi</strong> – hunarmandchilik markazi</li>
+                                <li><strong>Vaxshivor</strong> – transport tuguni</li>
+                                <li><strong>Basand (hozirgi Boysun)</strong> – me'moriy meros</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Savdo yo'llari</h3>
+                            <p>Tashqi savdo hamda Jayhun (Amudaryo) bo'yicha yuk tashishda quyidagi guzallar muhim
+                                ahamiyat kasb etgan:</p>
+                            <ul>
+                                <li><strong>Pattakesar</strong></li>
+                                <li><strong>Termiz</strong></li>
+                                <li><strong>Yorgoh Choʻchqaguzar</strong></li>
+                                <li><strong>Qorakamar</strong></li>
+                            </ul>
+                            <p>Bu guzarlardan <strong>chor Rossiyasi floti tashkil topmaguncha</strong> ya'ni XX
+                                asrgacha muntazam ravishda foydalanilgan.</p>
+                        </section>
+
+                        <section>
+                            <h3>Ko'rgazmalar</h3>
+                            <p>Zalda quyidagi namoyishxonalarning maketlari hamda fotodiorammalari mavjud:</p>
+                            <ul>
+                                <li><strong>Iskandar ko'prigi (Qumqo'rg'on tumani)</strong></li>
+                                <li><strong>Sayid Otaliq madrasasi (Denov)</strong></li>
+                                <li><strong>Murch bobo masjidi (Termiz)</strong></li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Me'moriy yodgorliklar</h3>
+                            <p>Surxon vohasining xonliklar davri me'moriy merosi quyidagi turkumlarga bo'linadi:</p>
+                            <ul>
+                                <li><strong>Madrasalar</strong></li>
+                                <li><strong>Karvonsaroylar</strong></li>
+                                <li><strong>Masjidlar</strong></li>
+                                <li><strong>Maqbaralar</strong></li>
+                                <li><strong>Bozorlar</strong></li>
+                                <li><strong>Ko'priklar</strong></li>
+                                <li><strong>Toğ va daryo bo'yidagi qal'alar</strong></li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Arxeologik topilmalar</h3>
+                            <p>Quyidagi joylardan o'tkazilgan arxeologik tadqiqotlar natijasida quyidagilar aniqlangan:
+                            </p>
+                            <ul>
+                                <li><strong>Kultepa (Jarqo'rg'on)</strong> – hunarmandchilik markazi</li>
+                                <li><strong>Yonikalon qal'asi</strong> – mudofaa inshooti</li>
+                                <li><strong>Mozorattepa (Boysun)</strong> – diniy meros</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Hunarmandchilik markazlari</h3>
+                            <p>Xonliklar davrida Surxon vohasida quyidagi hunarmandchilik markazlari vujudga kelgan:</p>
+                            <ul>
+                                <li><strong>Boysun</strong> – zargarlik buyumlari</li>
+                                <li><strong>Denov</strong> – temir qurollar</li>
+                                <li><strong>Sherobod</strong> – kulolchilik</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Kulolchilik san'ati</h3>
+                            <p>Bu davrda kulolchilik ham rivojlangan. Buyumlar quyidagicha tavsiflanadi:</p>
+                            <ul>
+                                <li><strong>XVI asr:</strong> Amir Temur davri an'analariga asoslangan idishlar</li>
+                                <li><strong>XVI asr oxiri:</strong> Rangdor idishlar, girih naqshlari</li>
+                                <li><strong>XVII–XVIII asrlar:</strong> To'q zangori va yashil ranglar ustunlik qilgan
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Eksponatlar</h3>
+                            <p>Zalda quyidagi eksponatlarning namunalari namoyish etilmoqda:</p>
+                            <ul>
+                                <li><strong>Jilokor koshin bo'laklari</strong></li>
+                                <li><strong>Temir va toshdan yasalgan qurollar</strong></li>
+                                <li><strong>Zargarlik buyumlari</strong></li>
+                                <li><strong>Sopol idishlar</strong> (rangdor naqshlar bilan)</li>
+                            </ul>
+                        </section>
+
+                        <p><a href="halls/hall-1.html">9-zal: Surxon vohasi XVI-XX asr boshlarida sayohat ▶</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tashrif uchun -->
+    <section id="visit" class="visit-section">
+        <div class="container">
+            <h2 data-i18n="t">Tashrif uchun ma'lumot</h2>
+            <p><strong data-i18n="iv">Ish vaqti:</strong> <span data-i18n="ivs">Dushanba - Shanba: 9:00 - 18:00</span>
+                <br>
+                <strong data-i18n="kn">Kirish narxi:</strong> <span data-i18n="kns">Bepul (ayrim ko'rgazmalar uchun
+                    alohida)</span><br>
+                <strong data-i18n="m1">Manzil:</strong> <span data-i18n="mm">Termiz shahri, Amir Temur ko'chasi,
+                    35-uy</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 data-i18n="k">Kontakt</h2>
+            <p>
+                <strong data-i18n="TEL">Telefon:</strong> <span>+998 76 224-12-34 </span><br>
+                <strong data-i18n="EM">Email:</strong> <span> info@termizmuseum.uz</span><br>
+            </p>
+            <!-- Tezkor kontakt forma -->
+            <form action="#" method="post" class="quick-contact-form">
+                <input type="text" placeholder="name" required>
+                <input type="email" placeholder="email" required>
+                <textarea placeholder="question"></textarea>
+                <button type="submit" class="btn" data-i18n="jj">Jo'natish</button>
+            </form>
+            <p id="formMessage"></p>
+            <!-- Til tanlovi -->
+            <div class="language-switcher">
+                <strong>Til:</strong>
+                <a href="#" onclick="setLanguage('uz')">UZ</a> |
+                <a href="#" onclick="setLanguage('ru')">RU</a> |
+                <a href="#" onclick="setLanguage('en')">EN</a>
+            </div>
+            <!-- Ijtimoiy tarmoqlar -->
+            <div class="social-icons">
+                <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/facebook.png " alt="Facebook"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png "
+                        alt="Instagram"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/youtube-play.png " alt="YouTube"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Muzeyning joylashuvi -->
+    <section id="map" class="location-section">
+        <div class="container">
+            <h2 data-i18n="m">Muzeyning joylashuvi</h2>
+            <p data-i18n="p11">Termiz Arxeologiya Muzeyi quyidagi hududda joylashgan:</p>
+            <!-- Joylashuv ma'lumoti -->
+            <div class="location-card">
+                <div class="location-icon">
+                    <img src="images/address.png" alt="Manzil">
+                </div>
+                <div class="location-text">
+                    <strong data-i18n="sh">Shahar:</strong> <span data-i18n="T">Termiz</span><br>
+                    <strong data-i18n="K">Ko'cha:</strong> <span data-i18n="AT"> Amir Temur ko'chasi, 35-uy </span><br>
+                    <strong data-i18n="V">Viloyat:</strong> <span data-i18n="S">Surxondaryo</span>
+                </div>
+            </div>
+            <!-- Qo'shimcha tugma -->
+            <div class="map-description">
+                <a href="https://www.google.com/maps/dir//Arxeologiya+Muzeyi/ @37.2442203,67.2824061,19z"
+                    target="_blank" class="btn-map" data-i18n="n">Navigatsiya uchun kirish</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yangiliklar -->
+    <section class="news-section">
+        <div class="container">
+            <h2 data-i18n="s">So'nggi yangiliklar</h2>
+            <div class="news-cards">
+                <div class="news-card">
+                    <h4 data-i18n="s1">2025-yil 5-avgust</h4>
+                    <p data-i18n="p12">"Surxon vohasidagi antik madaniyat" nomli yangi ko'rgazma ochildi.</p>
+                </div>
+                <div class="news-card">
+                    <h4 data-i18n="s1">2025-yil 20-iyul</h4>
+                    <p data-i18n="p17">Bolalar uchun interaktiv arxeologiya master-klassi o'tkazildi.</p>
+                </div>
+                <div class="news-card">
+                    <h4 data-i18n="s2">2025-yil 10-iyun</h4>
+                    <p data-i18n="p13">Muzey virtual sayohat tizimiga yangi zallar qo'shildi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 data-i18n="t">Tez-tez so'raladigan savollar</h2>
+            <div class="faq-item">
+                <h4 data-i18n="k">S: Kirish bepulmi?</h4>
+                <p data-i18n="p14">J: Ha, kirish asosan bepul, lekin ayrim maxsus ko'rgazmalar uchun to'lov talab
+                    qilinadi.</p>
+            </div>
+            <div class="faq-item">
+                <h4 data-i18n="ss">S: Ish vaqti qanday?</h4>
+                <p data-i18n="p15">J: Dushanba-Shanba: 9:00 - 18:00</p>
+            </div>
+            <div class="faq-item">
+                <h4 data-i18n="sss">S: Chipta onlayn sotiladimi?</h4>
+                <p data-i18n="p16">J: Hozircha yo'q, keyinroq qo'shiladi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual sayohat modal oynasi -->
+    <div id="virtualTourModal" class="modal">
+        <span class="close-btn" onclick="closeVirtualTour()" aria-label="Yopish">&times;</span>
+        <div class="modal-content">
+            <h2 id="tourTitle" data-i18n="v">Virtual Sayohat</h2>
+            <div id="tourGallery" class="gallery"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="text-align:center; padding:20px; background:#2c3e50; color:white;" data-i18n="ssss">
+        &copy; 2025 Termiz Arxeologiya Muzeyi. Barcha huquqlar himoyalangan.
+    </footer>
+
+    <!-- Skriptlar -->
+    <script>
+        // Mobil menyuni ochish/yopish
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Virtual sayohat funksiyasi
+        function openVirtualTour(zalNumber) {
+            const tourModal = document.getElementById("virtualTourModal");
+            const tourTitle = document.getElementById("tourTitle");
+            const tourGallery = document.getElementById("tourGallery");
+
+            const hallNames = {
+                "1": "Surxon vohasi tosh davrida",
+                "2": "Surxon vohasi bronza va temir davrida",
+                "3": "Qadimgi Baqtriya madaniyati",
+                "4": "Baqtriyaning Makedoniyalik Iskandar va Ellinstik davlatlar davri madaniyati",
+                "5": "Qadimgi Baqtriyaning kushon davri madaniyati",
+                "6": "Shimoliy Tohariston ilk oʻrta asrlar davrida",
+                "7": "Shimoliy Tohariston rivojlangan oʻrta asrlar davrida",
+                "8": "Termiz va Chagʻoniyonning Amir Temur va Temuriylar davlati davri madaniyati",
+                "9": "Surxon vohasi XVI-XX asr boshlarida"
+            };
+
+            const imageSources = {
+                "1": [
+                    "https://unsplash.com/photos/a-group-of-people-in-a-room-HOJmTZpTyyg",
+                    "https://source.unsplash.com/800x500/?archaeology ,history"
+                ],
+                "2": ["https://source.unsplash.com/800x500/?bronze-age ,museum"],
+                "3": ["https://source.unsplash.com/800x500/?antique ,bactria"],
+                "4": ["https://source.unsplash.com/800x500/?alexander-the-great ,ancient"],
+                "5": ["https://source.unsplash.com/800x500/?kushan ,coins"],
+                "6": ["https://source.unsplash.com/800x500/?middle-ages ,toharistan"],
+                "7": ["https://source.unsplash.com/800x500/?middle-ages ,development"],
+                "8": ["https://source.unsplash.com/800x500/?amir-timur ,timurid"],
+                "9": ["https://source.unsplash.com/800x500/?termiz ,history"]
+            };
+
+            tourTitle.textContent = "Virtual sayohat: " + hallNames[zalNumber];
+            tourGallery.innerHTML = "";
+            imageSources[zalNumber].forEach(imgSrc => {
+                const img = document.createElement("img");
+                img.src = imgSrc;
+                img.alt = "Zal rasmi";
+                tourGallery.appendChild(img);
+            });
+            tourModal.style.display = "flex";
+        }
+
+        function closeVirtualTour() {
+            document.getElementById("virtualTourModal").style.display = "none";
+        }
+    </script>
+    <!-- jQuery (agar hali bo'lmasa) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js "></script>
+
+    <!-- Google Translate Script -->
+    <div id="google_translate_element" style="display: none;"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'uz',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false,
+                includedLanguages: 'uz,ru,en'
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- <script src="js/virtual-tour.js"></script> -->
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>
